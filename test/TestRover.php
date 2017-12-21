@@ -22,15 +22,16 @@ class TestRover extends TestCase
     {
         $rover = new Rover(8,3,"E");
         
-        if ($rover->getOrientation() === "N"){
-            $this->assertEquals("N", $rover->getOrientation());
-        } else if ($rover->getOrientation() === "S"){
-            $this->assertEquals("S", $rover->getOrientation());
-        } else if ($rover->getOrientation() === "W"){
-            $this->assertEquals("W", $rover->getOrientation());
-        } else {
-            $this->assertEquals("E", $rover->getOrientation());
-        }
+        $this->assertEquals("E", $rover->getOrientation());
+        
+    }
+
+    public function testTurnRight()
+    {
+        $rover = new Rover(8, 3, "N");
+        $rover->turnRight();
+
+        $this->assertEquals("E", $rover->getOrientation());
     }
 
     

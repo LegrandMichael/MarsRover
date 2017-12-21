@@ -28,4 +28,17 @@ class Rover
     {
         return $this->orientation;
     }
+
+    public function turnRight()
+    {
+        if ($this->getOrientation() === "E"){
+            $this->orientation = "S";
+        } else if ($this->getOrientation() === "S"){
+            $this->orientation = "W";
+        } else if ($this->getOrientation() === "W"){
+            $this->orientation = "N";
+        } else {
+            $this->orientation = "E";
+        }
+    }
 }
