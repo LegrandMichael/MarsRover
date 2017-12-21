@@ -28,7 +28,4 @@ class Rover
     {
         return $this->orientation;
     }
-
-
-    
 }
