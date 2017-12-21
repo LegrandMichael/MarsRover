@@ -18,18 +18,22 @@ class TestRover extends TestCase
         $this->assertEquals("N", $rover->getOrientation());
     }
 
-    public function testIsTurned()
+    public function testIsChangedOrientation()
     {
-        $rover = new Rover(8,3,"N");
+        $rover = new Rover(8,3,"E");
         
-        if ($rover->getOrientation() === $this->orientation){
-            $this->assertEquals($this->orientation, $rover->getOrientation());
+        if ($rover->getOrientation() === "N"){
+            $this->assertEquals("N", $rover->getOrientation());
+        } else if ($rover->getOrientation() === "S"){
+            $this->assertEquals("S", $rover->getOrientation());
+        } else if ($rover->getOrientation() === "W"){
+            $this->assertEquals("W", $rover->getOrientation());
+        } else {
+            $this->assertEquals("E", $rover->getOrientation());
         }
-
-
-
-         
     }
+
+    
 
 }
 
